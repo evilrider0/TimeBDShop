@@ -17,24 +17,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        boolean connected = false;
-//        ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
-//        if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
-//                connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
-//            //we are connected to a network
-//            connected = true;
-//
-//        }
-//        else{
-//            connected = false;
-//        }
-
-
         //Create Web View
         WebView webb = (WebView)findViewById(R.id.webview1);
         webb.getSettings().setJavaScriptEnabled(true);
         webb.setWebViewClient(new WebViewClient());
-        webb.loadUrl("http://timebdshop.com");
+        webb.loadUrl("https://timebdshop.com");
 
         //Hook back key with application
         webb.setOnKeyListener(new View.OnKeyListener()
@@ -62,4 +49,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }
